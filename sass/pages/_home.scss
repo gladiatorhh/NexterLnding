@@ -1,0 +1,32 @@
+.realtors {
+    background-color: $color-secondary;
+    grid-column: col-start 7 / full-end;
+}
+
+
+
+.features {
+    background-color: $color-gray-dark-1;
+    grid-column: content-start / content-end;
+}
+
+.story {
+    &__pictures {
+        background-color: $color-primary-dark;
+        grid-column: full-start / col-end 4;
+    }
+
+    &__content {
+        background-color: $color-grey-light-1;
+        grid-column: col-start 5 / full-end;
+    }
+}
+
+.homes{
+    background-color: $color-secondary;
+    grid-column: content-start / content-end;
+}
+
+.gallery{
+    grid-column: full-start / full-end;
+}

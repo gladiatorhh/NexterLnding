@@ -1,0 +1,10 @@
+html{
+    font-size: 62.5%; // 1 rem == 10 px
+}
+
+body{
+    font-family: $font-primary;
+    color: $color-gray-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+}
