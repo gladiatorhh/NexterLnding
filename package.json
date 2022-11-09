@@ -4,8 +4,18 @@
   "description": "A test project for fun",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:sass": "node-sass sass/main.scss style/style.css -w",
+    "compile:sass": "node-sass sass/main.scss style/style.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10versions' style/style.css -o style/style.prefix.css",
+    "compress:css": "node-sass style/style.prefix.css style/style.css --output-style compressed",
+    "compile:all": "npm-run-all compile:sass prefix:css compress:css"
   },
   "author": "Arian Haghighi",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "node-sass": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.0.0"
+  }
 }
