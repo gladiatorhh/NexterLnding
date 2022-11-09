@@ -1,0 +1,2 @@
+#ignore all npm package files 
+node_modules/
