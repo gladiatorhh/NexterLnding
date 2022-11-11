@@ -3,11 +3,13 @@
     grid-column: col-start 7 / full-end;
 }
 
-
-
 .features {
-    background-color: $color-gray-dark-1;
     grid-column: content-start / content-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+    align-items: start;
+    margin-block: 15rem;
 }
 
 .story {
@@ -17,16 +19,16 @@
     }
 
     &__content {
-        background-color: $color-grey-light-1;
+        background-color: $color-gray-light-1;
         grid-column: col-start 5 / full-end;
     }
 }
 
-.homes{
+.homes {
     background-color: $color-secondary;
     grid-column: content-start / content-end;
 }
 
-.gallery{
+.gallery {
     grid-column: full-start / full-end;
 }

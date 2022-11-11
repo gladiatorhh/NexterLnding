@@ -17,6 +17,32 @@ body {
   font-weight: 300;
   line-height: 1.6; }
 
+.heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-4 {
+  font-size: 1.9rem; }
+  .heading-4--light {
+    color: #f9f7f6; }
+  .heading-4--light {
+    color: #54483A; }
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: start;
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 1.5rem; }
+  .feature__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    fill: #c69963;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem); }
+  .feature__text {
+    font-size: 1.7rem; }
+
 .footer {
   background-color: #101d2c;
   grid-column: full-start / full-end; }
@@ -40,8 +66,12 @@ body {
   grid-column: col-start 7 / full-end; }
 
 .features {
-  background-color: #54483A;
-  grid-column: content-start / content-end; }
+  grid-column: content-start / content-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  align-items: start;
+  margin-block: 15rem; }
 
 .story__pictures {
   background-color: #B28451;

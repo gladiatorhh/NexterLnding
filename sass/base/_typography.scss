@@ -1,10 +1,27 @@
-html{
+html {
     font-size: 62.5%; // 1 rem == 10 px
 }
 
-body{
+body {
     font-family: $font-primary;
     color: $color-gray-dark-2;
     font-weight: 300;
     line-height: 1.6;
+}
+
+%heading{
+    font-family: $font-display;
+    font-weight: 400;
+}
+
+.heading-4 {
+   @extend %heading;
+   font-size: 1.9rem;
+
+   &--light{
+    color: $color-gray-light-1;
+   }
+   &--light{
+    color: $color-gray-dark-1;
+   }
 }
