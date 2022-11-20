@@ -133,7 +133,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [content-start] repeat(8, [col-start] 14.2rem [col-end]) [content-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [content-start] repeat(8, [col-start] minmax(min-content, 14.2rem) [col-end]) [content-end] minmax(6rem, 1fr) [full-end]; }
 
 .header {
   background-color: #f9f7f6;
