@@ -128,7 +128,33 @@ body {
 
 .footer {
   background-color: #101d2c;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  padding: 8rem; }
+  .footer__copyright {
+    width: 70%;
+    margin-top: 6rem;
+    font-size: 1.4rem;
+    color: #aaa;
+    margin-inline: auto;
+    text-align: center; }
+
+.nav {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-items: center; }
+  .nav__link:link, .nav__link:visited {
+    font-size: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    transition: all .2s;
+    padding: 1.5rem;
+    display: block; }
+  .nav__link:hover, .nav__link:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-0.3rem); }
 
 .container {
   display: grid;
