@@ -1,5 +1,9 @@
 html {
     font-size: 62.5%; // 1 rem == 10 px
+
+    @include respond($bp-xlg){
+        font-size: 50%;
+    }
 }
 
 body {

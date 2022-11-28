@@ -22,6 +22,9 @@ html {
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -165,6 +168,13 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [content-start] repeat(8, [col-start] minmax(min-content, 14.2rem) [col-end]) [content-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(8, [col-start] minmax(min-content, 14.2rem) [col-end]) [content-end] minmax(6rem, 1fr) [full-end]; } }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content); } }
 
 .header {
   background-image: linear-gradient(to right, rgba(16, 29, 44, 0.8), rgba(16, 29, 44, 0.8)), url("../img/hero.jpeg");
@@ -173,12 +183,18 @@ body {
   background-position: top;
   grid-column: full-start / col-end 6;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   padding: 8rem;
   padding-top: 4rem;
   justify-content: center; }
+  @media only screen and (max-width: 50em) {
+    .header {
+      grid-column: 1 / -1; } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      padding: 5rem; } }
   .header__logo {
     height: 3rem;
     justify-self: center; }
@@ -201,9 +217,11 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 3rem;
-    justify-items: center; }
+    justify-items: center;
+    align-items: center; }
     .header__seenon-logos img {
-      height: 2.5rem;
+      max-height: 2.5rem;
+      max-width: 100%;
       filter: brightness(80%); }
 
 .sidebar {
@@ -213,6 +231,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start; }
+  @media only screen and (max-width: 62.5em) {
+    .sidebar {
+      align-items: center;
+      justify-content: flex-end;
+      grid-column: 1 / -1;
+      grid-row: 1 / 2; } }
 
 .nav-btn {
   border: none;
@@ -221,6 +245,14 @@ body {
   height: .2rem;
   width: 4.5rem;
   margin-top: 3rem; }
+  @media only screen and (max-width: 62.5em) {
+    .nav-btn {
+      margin-top: 0;
+      margin-right: 3rem; }
+      .nav-btn::before {
+        transform: translateY(-1.2rem); }
+      .nav-btn::after {
+        transform: translateY(1rem); } }
   .nav-btn::before, .nav-btn::after {
     content: "";
     display: block;
@@ -241,6 +273,9 @@ body {
   grid-row-gap: 2rem;
   justify-items: center;
   padding: 3rem; }
+  @media only screen and (max-width: 50em) {
+    .realtors {
+      grid-column: 1 / -1; } }
   .realtors__list {
     display: grid;
     grid-template-columns: 7rem max-content;
@@ -248,6 +283,13 @@ body {
     grid-row-gap: 5vh;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 50em) {
+      .realtors__list {
+        grid-template-columns: repeat(3, 7rem max-content); } }
+    @media only screen and (max-width: 37.5em) {
+      .realtors__list {
+        padding: 5rem;
+        grid-template-columns: 7rem max-content; } }
   .realtors__img {
     width: 100%;
     border-radius: 50%;
@@ -272,18 +314,29 @@ body {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   align-items: center; }
+  @media only screen and (max-width: 50em) {
+    .story__pictures {
+      grid-column: 1 / -1; } }
 
 .story__img {
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
   .story__img--1 {
     grid-column: 2 / 6;
     grid-row: 2/ 6;
-    width: 100%; }
+    width: 100%;
+    z-index: 10; }
+    @media only screen and (max-width: 50em) {
+      .story__img--1 {
+        transform: translateY(-2rem); } }
   .story__img--2 {
     grid-column: 4 / 7;
     grid-row: 4 / 6;
     width: 115%;
     z-index: 20; }
+    @media only screen and (max-width: 50em) {
+      .story__img--2 {
+        width: 100%;
+        transform: translate(-3rem, 5rem); } }
 
 .story__content {
   padding: 6rem 12rem;
@@ -293,6 +346,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; }
+  @media only screen and (max-width: 50em) {
+    .story__content {
+      grid-column: 1 / -1; } }
 
 .story__text {
   font-size: 1.5rem;

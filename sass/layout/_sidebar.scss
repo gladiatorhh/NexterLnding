@@ -5,6 +5,12 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    @include respond($bp-lg) {
+        align-items: center;
+        justify-content: flex-end;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
 }
 
 .nav-btn {
@@ -14,6 +20,19 @@
     height: .2rem;
     width: 4.5rem;
     margin-top: 3rem;
+
+    @include respond($bp-lg) {
+        margin-top: 0;
+        margin-right: 3rem;
+
+        &::before {
+            transform: translateY(-1.2rem);
+        }
+    
+        &::after {
+            transform: translateY(1rem);
+        }
+    }
 
     &::before,
     &::after {
